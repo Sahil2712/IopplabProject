@@ -13,6 +13,11 @@ import common_use_bean.Home_Page_Use_Bean;
 
 
 public class Home_Page_Model {
+	/* * Method Name:select_counts()
+	    * Return Type:Home_Page_Use_Bean
+	    * Parameters :void
+	    * Description:Queries the value from the db  and set the inserted values
+	  */
 	public Home_Page_Use_Bean select_counts(){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();

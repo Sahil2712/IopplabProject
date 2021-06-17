@@ -14,7 +14,11 @@ public class Sequence_Book_Id {
 	
 	
 	
-	
+	/* * Method Name:main()
+	    * Return Type:void
+	    * Parameters :String[] args
+	    * Description: Main Method 
+	  */
 	public static void main(String[] args) {
 		
 		
@@ -24,6 +28,12 @@ public class Sequence_Book_Id {
 		System.out.println("Sequence book_id Id is "+obj_Sequence_Book_Id.get_book_id());
 		
 	}
+	
+	/* * Method Name:get_book_id()
+	    * Return Type:String
+	    * Parameters :void
+	    * Description: Returns the book_id 
+	  */
 	
 	public String get_book_id(){
 		PreparedStatement ps=null;
@@ -67,6 +77,11 @@ public class Sequence_Book_Id {
 	}
 	
 	
+	/* * Method Name:create_table()
+	    * Return Type:void
+	    * Parameters :void
+	    * Description: Creates table sequence_book_id in the database and insert the values in to the table  
+	  */
 	
 	public  void create_table(){
 		PreparedStatement ps=null;

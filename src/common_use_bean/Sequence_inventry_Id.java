@@ -13,7 +13,11 @@ public class Sequence_inventry_Id {
 	
 	
 	
-	
+	/* * Method Name:main()
+	    * Return Type:void
+	    * Parameters :String[] args
+	    * Description: Main Method  
+	  */
 	
 	public static void main(String[] args) {
 		
@@ -24,7 +28,11 @@ public class Sequence_inventry_Id {
 		System.out.println("Sequence book_id Id is "+obj_Sequence_Book_Id.get_inv_id());
 		
 	}
-	
+	/* * Method Name:get_inv_id()
+	    * Return Type:String 
+	    * Parameters :void
+	    * Description: Update the sequence_inventry_id  
+	  */
 	public String get_inv_id(){
 		PreparedStatement ps=null;
 		Connection connection=null;
@@ -63,7 +71,11 @@ public class Sequence_inventry_Id {
 	}
 	
 	
-	
+	/* * Method Name:create_table()
+	    * Return Type:void
+	    * Parameters :void
+	    * Description: Creates table sequence_inventry_id in the database and add the values in the table  
+	  */
 	public  void create_table(){
 		PreparedStatement ps=null;
 		Connection connection=null;

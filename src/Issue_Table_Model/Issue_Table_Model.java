@@ -15,7 +15,11 @@ import common_use_bean.Sequence_Issue_Id;
 public class Issue_Table_Model {
 	
 	
-	
+	/* * Method Name:update_issue_book()
+	    * Return Type:int
+	    * Parameters :obj_Issue_Use_Bean
+	    * Description: return true or flase  
+	  */
 	public int update_issue_book(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -109,7 +113,11 @@ public class Issue_Table_Model {
 	return flag;
 
 	}	
-	
+	/* * Method Name:get_days_delay()
+	    * Return Type:String
+	    * Parameters :String dateStart,String dateStop
+	    * Description: Return the days  
+	  */
 	public String  get_days_delay( String dateStart,String dateStop) {
 		// String dateStart = "28-09-2014";
 			//String dateStop = "28-10-2014";
@@ -150,7 +158,11 @@ public class Issue_Table_Model {
 	 }
 	 
 	
-	
+	/* * Method Name:get_issue_status()
+	    * Return Type:int
+	    * Parameters :obj_Issue_Use_Bean
+	    * Description: Returns true or false'  
+	  */
 	public int issue_book(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -259,7 +271,11 @@ public class Issue_Table_Model {
 	
 	
 	
-	
+	/* * Method Name:issue_book_from_student()
+	    * Return Type:int
+	    * Parameters :obj_Issue_Use_Bean
+	    * Description: Returns true or false'  
+	  */
 	
 	
 	public int issue_book_from_student(Issue_Use_Bean obj_Issue_Use_Bean){
@@ -374,7 +390,11 @@ public class Issue_Table_Model {
 	
 	
 	
-	
+	/* * Method Name:delete_this_issue()
+	    * Return Type:int
+	    * Parameters :obj_Issue_Use_Bean
+	    * Description: Returns true or false'  
+	  */
 	public int delete_this_issue(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -439,7 +459,11 @@ public class Issue_Table_Model {
 	
 	
 	
-	
+	/* * Method Name:issue_history_for_a_barcode()
+	    * Return Type:List<Issue_Use_Bean>
+	    * Parameters :String barcode
+	    * Description: Returns the issue history  
+	  */
 					public List<Issue_Use_Bean> issue_history_for_a_barcode(String barcode){
 						Connection connection=null;
 						DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -520,7 +544,11 @@ public class Issue_Table_Model {
 				
 					}	
 					
-					
+					/* * Method Name:issue_history_for_a_student()
+					    * Return Type:List<Issue_Use_Bean>
+					    * Parameters :String Student_id
+					    * Description: Returns the issue history of student in a list  
+					  */
 					public List<Issue_Use_Bean> issue_history_for_a_student(String Student_id){
 						Connection connection=null;
 						DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -594,7 +622,11 @@ public class Issue_Table_Model {
 				
 					}	
 					
-					
+					/* * Method Name:get_complete_details_of_issue(String issue_sl_no)
+					    * Return Type:Issue_Use_Bean
+					    * Parameters :String issue_sl_no
+					    * Description: Returns the details of issued book
+					  */
 	
 					public Issue_Use_Bean get_complete_details_of_issue(String issue_sl_no){
 						Connection connection=null;
@@ -674,7 +706,11 @@ public class Issue_Table_Model {
 					
 					
 					
-					
+					/* * Method Name:get_complete_issue_history(int lim)
+					    * Return Type:List<Issue_Use_Bean>
+					    * Parameters :int lim
+					    * Description: Returns the history  of issued book
+					  */
 					public List<Issue_Use_Bean> get_complete_issue_history(int lim){
 						Connection connection=null;
 						DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -755,7 +791,11 @@ public class Issue_Table_Model {
 					
 					
 					 
-					
+					/* * Method Name:get_all_pending_issues(int lim)
+					    * Return Type:List<Issue_Use_Bean>
+					    * Parameters :int lim
+					    * Description: Returns the history  of issued book
+					  */
 					public List<Issue_Use_Bean> get_all_pending_issues(int lim){
 						Connection connection=null;
 						DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -836,7 +876,11 @@ public class Issue_Table_Model {
 					
 					
 					
-					
+					/* * Method Name:search_issue_history(String search)
+					    * Return Type:List<Issue_Use_Bean>
+					    * Parameters :String search
+					    * Description: Returns the search_issue_history
+					  */
 					
 					
 					public List<Issue_Use_Bean> search_issue_history(String search){

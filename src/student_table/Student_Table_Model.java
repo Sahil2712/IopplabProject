@@ -17,6 +17,12 @@ import common_use_bean.Student_Use_Bean;
 
 
 public class Student_Table_Model {
+	
+	/*Method Name : insert_student
+	 * return type: int
+	 * parameters user: Student_Use_Bean
+	 */
+	
 	public int insert_student(Student_Use_Bean obj_Student_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -101,6 +107,11 @@ public class Student_Table_Model {
 
 	}	
 	
+
+	/*Method Name : edit_student
+	 * return type: int
+	 * parameters user: Student_Use_Bean
+	 */
 	
 	
 	public int edit_student(Student_Use_Bean obj_Student_Use_Bean){
@@ -178,6 +189,11 @@ public class Student_Table_Model {
 	
 	
 	
+
+	/*Method Name : get_all_recently_added_students
+	 * return type: List
+	 * parameters used:void
+	 */
 	
 	
 	public List<Student_Use_Bean> get_all_recently_added_students(){
@@ -233,7 +249,10 @@ public class Student_Table_Model {
 	}	
 	
 	
-	
+	/*Method Name : get_all_recently_added_students
+	 * return type: List
+	 * parameters used:String Search
+	 */
 	public List<Student_Use_Bean> search_result_student(String search){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -294,6 +313,10 @@ public class Student_Table_Model {
 
 	}	
 	
+	/*Method Name : get_complete_details_student
+	 * return type: List
+	 * parameters used:String student_id
+	 */
 	
 	public Student_Use_Bean get_complete_details_student(String student_id){
 		Connection connection=null;
@@ -360,7 +383,10 @@ public class Student_Table_Model {
 
 	}	
 	
-	
+	/*Method Name : get_all_students
+	 * return type: List
+	 * parameters used:int lim
+	 */
 	
 	public List<Student_Use_Bean> get_all_students(int lim){
 		Connection connection=null;

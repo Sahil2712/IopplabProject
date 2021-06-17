@@ -12,6 +12,11 @@ import common_use_bean.Book_Use_Bean;
 
 
 public class Category_Author_Publisher_Model {
+	
+	 /* * Method Name:insert_category
+	    * Return Type:int
+	    * Parameters :String category_name,String profile,String added_no
+	  */
 	public int insert_category(String category_name,String profile,String added_on){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -92,7 +97,10 @@ public class Category_Author_Publisher_Model {
 	
 	
 	
-	
+	 /* * Method Name:insert_author
+	    * Return Type:int
+	    * Parameters :String author_name,String profile,String added_on
+	  */
 	public int insert_author(String author_name,String profile,String added_on){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -169,7 +177,10 @@ public class Category_Author_Publisher_Model {
 
 	}	
 	
-	
+	 /* * Method Name:insert_publisher
+	    * Return Type:int
+	    * Parameters :String publisher_name,String profile,String added_on
+	  */
 	
 	public int insert_publisher(String publisher_name,String profile,String added_on){
 		Connection connection=null;

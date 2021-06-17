@@ -16,7 +16,10 @@ import common_use_bean.Category_Use_Bean;
 
 public class Category_Table {
 	
-	
+	 /*Method Name : insert_category
+     * Return Type: int
+     * Parameters : obj_Category_Use_Bean
+     */
 	public int insert_category(Category_Use_Bean obj_Category_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -83,7 +86,10 @@ public class Category_Table {
 	
 
 	
-	
+	 /*Method Name : edit_category
+     * Return Type: int
+     * Parameters : obj_Category_Use_Bean
+     */
 	
 	public int edit_category(Category_Use_Bean obj_Category_Use_Bean){
 		Connection connection=null;
@@ -148,7 +154,10 @@ public class Category_Table {
 	
 	
 	
-	
+	 /*Method Name : get_all_category
+     * Return Type: List
+     * Parameters :void
+     */
 
 			public List<Category_Use_Bean> get_all_category(){
 				Connection connection=null;
@@ -203,7 +212,11 @@ public class Category_Table {
 		
 			}	
 			
-			
+
+			 /*Method Name : get_search_category
+		     * Return Type: List
+		     * Parameters :String Search
+		     */
 			public List<Category_Use_Bean> get_search_result(String search){
 				Connection connection=null;
 				DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();

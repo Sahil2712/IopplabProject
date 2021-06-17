@@ -13,7 +13,11 @@ public class Sequence_Student_Id {
 	
 	
 	
-	
+	/* * Method Name:main()
+	    * Return Type:void
+	    * Parameters :String[] args
+	    * Description: Main  
+	  */
 	
 	public static void main(String[] args) {
 		
@@ -25,6 +29,11 @@ public class Sequence_Student_Id {
 		
 	}
 	
+	/* * Method Name:get_student_id()
+	    * Return Type:String
+	    * Parameters :void
+	    * Description: Updates the student_id   
+	  */
 	public String get_student_id(){
 		PreparedStatement ps=null;
 		Connection connection=null;
@@ -62,7 +71,11 @@ public class Sequence_Student_Id {
 		
 	}
 	
-	
+	/* * Method Name:create_table()
+	    * Return Type:void
+	    * Parameters :void
+	    * Description: Creates table sequence_student_id in the database  
+	  */
 	
 	public  void create_table(){
 		PreparedStatement ps=null;

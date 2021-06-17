@@ -16,6 +16,12 @@ import common_use_bean.Category_Use_Bean;
 
 
 public class Author_Table_Model {
+	
+
+	 /*Method Name : insert_author
+    * Return Type:int
+    * Parameters :obj_Author_Use_Bean
+    */
 	public int insert_author(Author_Use_Bean obj_Author_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -84,7 +90,10 @@ public class Author_Table_Model {
 	
 	
 	
-	
+	 /*Method Name : edit_author
+	    * Return Type:int
+	    * Parameters :obj_Author_Use_Bean
+	    */
 
 	public int edit_author(Author_Use_Bean obj_Author_Use_Bean){
 		Connection connection=null;
@@ -149,7 +158,10 @@ public class Author_Table_Model {
 	
 	
 	
-	
+	 /*Method Name : get_all_author
+	    * Return Type:List
+	    * Parameters :void
+	    */
 
 			public List<Author_Use_Bean> get_all_authors(){
 				Connection connection=null;
@@ -157,7 +169,15 @@ public class Author_Table_Model {
 				connection=obj_DBConnection_SMS_Portal.getConnection();
 				PreparedStatement ps=null;
 				ResultSet rs=null;
+				
+//				Array List Data Structure is used
+				
 				List<Author_Use_Bean> list=new ArrayList<Author_Use_Bean>();
+				
+				
+				
+				
+				
 			try { 
 				
 				String query="select * from author order by added_on desc";
@@ -204,7 +224,11 @@ public class Author_Table_Model {
 		
 			}	
 			
-			
+
+			 /*Method Name   :get_search_result_author
+			    * Return Type:List<Author_Use_Bean>
+			    * Parameters :String Search
+			  */
 			public List<Author_Use_Bean> get_search_result_author(String search){
 				Connection connection=null;
 				DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();

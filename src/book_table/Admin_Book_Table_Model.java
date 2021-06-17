@@ -20,6 +20,12 @@ import common_use_bean.Student_Use_Bean;
 
 
 public class Admin_Book_Table_Model {
+	
+	 /* * Method Name   :insert_book
+	    * Return Type:int
+	    * Parameters :obj_Book_Use_Bean
+	  */
+	
 	public int insert_book(Book_Use_Bean obj_Book_Use_Bean){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -109,48 +115,7 @@ public class Admin_Book_Table_Model {
 			ps.setString(21,book_sl_no);
 			    System.out.println(ps);
 			 flag=ps.executeUpdate();
-			 
-			 /*
-			 
-			 query="insert into inventry_table (" +
-				"book_sl_no," +
-				"book_title," +
-				"count," +
-				"added_on," +
-				"added_by,sl_no" +
-					") values(?,?,?,?,?,?)";
-			 ps=connection.prepareStatement(query);
-				ps.setString(1,book_sl_no);
-				ps.setString(2,obj_Book_Use_Bean.getBook_title());
-				ps.setInt(3,obj_Book_Use_Bean.getTotal_book_in_library());
-				ps.setString(4,date4);
-				ps.setString(5,"ADMIN");
-					Sequence_inventry_Id obj_Sequence_inventry_Id=new Sequence_inventry_Id();
-				String inve_sl_no=obj_Sequence_inventry_Id.get_inv_id();
-				ps.setString(6,inve_sl_no);
-				ps.executeUpdate();
-				 
-				
-				if(obj_Book_Use_Bean.getTotal_book_in_library()!=0){
 
-				 query="insert into serial_number (" +
-					"invertry_sl_no," +
-					"book_title," +
-					"book_sl_no," +
-					"bar_code," +
-					"book_status,added_on" +
-						") values ";
-				 
-				 
-				 for(int i=1;i<=obj_Book_Use_Bean.getTotal_book_in_library();i++){
-					 query=query+"('"+inve_sl_no+"','"+obj_Book_Use_Bean.getBook_title()+"','"+book_sl_no+"','"+book_sl_no+categroy_sl_no+i+"','Available','"+date4+"'),";
-				 }
-				 query=query.substring(0, query.length()-1);
-				 ps=connection.prepareStatement(query);
-					
-					ps.executeUpdate();
-					
-				}*/
 		
 	 }catch(Exception e){
 		e.printStackTrace();
@@ -185,7 +150,10 @@ public class Admin_Book_Table_Model {
 	
 	
 	
-	
+	 /* * Method Name:edit_book
+	    * Return Type:int
+	    * Parameters :obj_Book_Use_Bean
+	  */
 	
 	public int edit_book(Book_Use_Bean obj_Book_Use_Bean){
 		Connection connection=null;
@@ -321,7 +289,10 @@ public class Admin_Book_Table_Model {
 	
 	
 	
-	
+	 /* * Method Name:get_all_recently_added_books
+	    * Return Type:List<Book_Use_Bean>
+	    * Parameters :void
+	  */
 	public List<Book_Use_Bean> get_all_recently_added_books(){
 		Connection connection=null;
 		DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -375,7 +346,10 @@ public class Admin_Book_Table_Model {
 	}	
 	
 	
-	
+	 /* * Method Name:get_Complete_details_of_book
+	    * Return Type:Book_Use_Bean
+	    * Parameters :book_sl_no
+	  */
 						public Book_Use_Bean get_Complete_details_of_book(String book_sl_no){
 							Connection connection=null;
 							DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -442,7 +416,10 @@ public class Admin_Book_Table_Model {
 					
 						}	
 						
-	
+						 /* * Method Name:search_result_book
+						    * Return Type:List<Book_Use_Bean>
+						    * Parameters :String search
+						  */
 						public List<Book_Use_Bean> search_result_book(String search){
 							Connection connection=null;
 							DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();
@@ -534,7 +511,10 @@ public class Admin_Book_Table_Model {
 
 						}	
 						
-						
+						 /* * Method Name:view_all_books
+						    * Return Type:List<Book_Use_Bean>
+						    * Parameters :int lim
+						  */
 						public List<Book_Use_Bean> view_all_books(int lim){
 							Connection connection=null;
 							DBConnection_LMS_Portal obj_DBConnection_SMS_Portal=new DBConnection_LMS_Portal();

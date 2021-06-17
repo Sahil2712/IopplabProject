@@ -11,6 +11,11 @@ import common.DBConnection_LMS_Portal;
 import common_use_bean.Admin_Use_Bean;
 
 public class Admin_Profile_Model {
+	
+		           /*Method Name : admin_sign_in
+		            * Return Type: Admin_Use_Bean
+		            * Parameters : obj_Admin_Use_Bean
+		            */
 					public Admin_Use_Bean admin_sign_in(Admin_Use_Bean obj_Admin_Use_Bean){
 						PreparedStatement ps=null;
 						ResultSet rs=null;
@@ -28,6 +33,8 @@ public class Admin_Profile_Model {
 						       String date4 = format.format(today4);
 						
 					try { 
+						
+						//Question Mark Represents that the details will be filled with the information given in the frontend
 						
 						String query="select * from admin where user_name=? and password=?";
 						ps = connection.prepareStatement(query);
@@ -83,7 +90,10 @@ public class Admin_Profile_Model {
 					
 				
 
-					
+					   /*Method Name : edit_profile
+			            * Return Type: int
+			            * Parameters : obj_Admin_Use_Bean
+			            */
 					
 					public int edit_profile(Admin_Use_Bean obj_Admin_Use_Bean){
 						PreparedStatement ps=null;
@@ -138,7 +148,10 @@ public class Admin_Profile_Model {
 				}
 					
 				
-					
+					   /*Method Name : admin_sign_in
+			            * Return Type: Admin_Use_Bean
+			            * Parameters : obj_Admin_Use_Bean
+			            */
 					public Admin_Use_Bean get_admin_details(Admin_Use_Bean obj_Admin_Use_Bean){
 						PreparedStatement ps=null;
 						ResultSet rs=null;

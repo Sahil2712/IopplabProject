@@ -11,7 +11,13 @@ import java.sql.SQLException;
 public class DBConnection_LMS_Portal {
 	
 	//This function returns the connection
-	//This function returns the connection	
+
+	 /* * Method Name:getConnection()
+	    * Return Type:Connection
+	    * Parameters :void
+	    * Description: Returns the connection added
+	  */
+		
 	public Connection getConnection(){
 		Connection connection=null;
 		System.out.println("Connection called");

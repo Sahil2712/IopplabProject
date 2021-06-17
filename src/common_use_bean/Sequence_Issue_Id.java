@@ -13,7 +13,11 @@ public class Sequence_Issue_Id {
 	
 	
 	
-	
+	/* * Method Name:main()
+	    * Return Type:void
+	    * Parameters :String[] args
+	    * Description: Main  
+	  */
 	
 	public static void main(String[] args) {
 		
@@ -24,6 +28,11 @@ public class Sequence_Issue_Id {
 		System.out.println("Sequence ISSUE Id is "+obj_Sequence_Issue_Id.get_issue_id());
 		
 	}
+	/* * Method Name:get_issue_id()
+	    * Return Type:String
+	    * Parameters :void
+	    * Description: update the sequence_issue_id by querying the sl_no
+	  */
 	
 	public String get_issue_id(){
 		PreparedStatement ps=null;
@@ -62,7 +71,11 @@ public class Sequence_Issue_Id {
 		
 	}
 	
-	
+	/* * Method Name:create_table()
+	    * Return Type:void
+	    * Parameters :void
+	    * Description: Creates table sequence_issue_id in the database and add the values in the table  
+	  */
 	
 	public  void create_table(){
 		PreparedStatement ps=null;
