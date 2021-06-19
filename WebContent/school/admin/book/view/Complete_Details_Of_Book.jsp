@@ -1,3 +1,15 @@
+<!--
+ *Performs the Complete details book function in the frontend
+ *DATA STRUCTURE USED:ArrayList<>;
+ 
+ *Date Base Used: MySQL
+ *External Jar Used: jsp-api-2.2.jar
+ *Server: Apache Tomcat Version 9.0 
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	12/06/2021
+ *Testing :Raksha Udupi 
+-->
 <!DOCTYPE html>
 
 <%@page import="book_table.Admin_Book_Table_Model"%>

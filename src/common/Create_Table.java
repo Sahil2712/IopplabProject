@@ -9,7 +9,15 @@ import common_use_bean.Sequence_Book_Id;
 import common_use_bean.Sequence_Issue_Id;
 import common_use_bean.Sequence_Student_Id;
 import common_use_bean.Sequence_inventry_Id;
-
+/*
+ *Program to create tables
+ *Date Base Used: MySQL
+ *External Jar Required: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
 public class Create_Table {
 
 		public static void call_me() {

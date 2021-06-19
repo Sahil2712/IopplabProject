@@ -15,12 +15,32 @@ import common_use_bean.Sequence_Student_Id;
 import common_use_bean.Student_Use_Bean;
 
 
+/*
+ *Program to build a api to add,edit,search,list the student information
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 6 Methods
+		* int insert_student(Student_Use_Bean obj_Student_Use_Bean)
+ 		* int edit_student(Student_Use_Bean obj_Student_Use_Bean)
+  		* List<Student_Use_Bean> get_all_recently_added_students()
+ 		* List<Student_Use_Bean> search_result_student(String search)
+		* Student_Use_Bean get_complete_details_student(String student_id)
+		* List<Student_Use_Bean> get_all_students(int lim)
+ *Date Base Used: MySQL
+ *External Jar Used: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
+
 
 public class Student_Table_Model {
 	
-	/*Method Name : insert_student
-	 * return type: int
+	/*
+	 * Method Name     : insert_student
+	 * return type    : int
 	 * parameters user: Student_Use_Bean
+	 * Description    : Returns 1 if student is added successfully in the database else 0
 	 */
 	
 	public int insert_student(Student_Use_Bean obj_Student_Use_Bean){
@@ -111,6 +131,7 @@ public class Student_Table_Model {
 	/*Method Name : edit_student
 	 * return type: int
 	 * parameters user: Student_Use_Bean
+	 * Description  : Return 1 if the editing is done successfully else 0
 	 */
 	
 	
@@ -190,9 +211,10 @@ public class Student_Table_Model {
 	
 	
 
-	/*Method Name : get_all_recently_added_students
-	 * return type: List
-	 * parameters used:void
+	/*Method Name      : get_all_recently_added_students
+	 * return type     : List
+	 * parameters used : void
+	 * Description     : Returns the list of students who are added recently with having limit 10
 	 */
 	
 	
@@ -249,9 +271,10 @@ public class Student_Table_Model {
 	}	
 	
 	
-	/*Method Name : get_all_recently_added_students
-	 * return type: List
-	 * parameters used:String Search
+	/*Method Name      : get_all_recently_added_students
+	 * return type     : List
+	 * parameters used : String Search
+	 * Description     : Returns the list of book searched
 	 */
 	public List<Student_Use_Bean> search_result_student(String search){
 		Connection connection=null;
@@ -313,9 +336,11 @@ public class Student_Table_Model {
 
 	}	
 	
-	/*Method Name : get_complete_details_student
-	 * return type: List
-	 * parameters used:String student_id
+	/*
+	 * Method Name     : get_complete_details_student
+	 * return type     : List
+	 * parameters used : String student_id
+	 * Description     : Returns the complete details of student which is fetched using student_id
 	 */
 	
 	public Student_Use_Bean get_complete_details_student(String student_id){
@@ -383,9 +408,11 @@ public class Student_Table_Model {
 
 	}	
 	
-	/*Method Name : get_all_students
-	 * return type: List
-	 * parameters used:int lim
+	/* 
+	 * Method Name     : get_all_students
+	 * return type     : List
+	 * parameters used : int lim
+	 * Description     : Returns the list of all students present in the database having limit as 100;
 	 */
 	
 	public List<Student_Use_Bean> get_all_students(int lim){

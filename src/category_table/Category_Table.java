@@ -12,6 +12,23 @@ import java.util.TimeZone;
 import common.DBConnection_LMS_Portal;
 import common_use_bean.Category_Use_Bean;
 
+/*
+ *Program to build an api for Add,edit,list and search  category information;
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 3 Methods
+ *
+ 	* int insert_category(Category_Use_Bean obj_Category_Use_Bean)
+ 	* int edit_category(Category_Use_Bean obj_Category_Use_Bean)
+ 	* List<Category_Use_Bean> get_all_category()
+ 	* List<Category_Use_Bean> get_search_result(String search)
+ *Date Base Used: MySQL
+ *External Jar Required: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
+
 
 
 public class Category_Table {
@@ -19,6 +36,7 @@ public class Category_Table {
 	 /*Method Name : insert_category
      * Return Type: int
      * Parameters : obj_Category_Use_Bean
+     * Description:  Returns 1 if the category info is added successfully in the database else 0;
      */
 	public int insert_category(Category_Use_Bean obj_Category_Use_Bean){
 		Connection connection=null;
@@ -87,8 +105,9 @@ public class Category_Table {
 
 	
 	 /*Method Name : edit_category
-     * Return Type: int
-     * Parameters : obj_Category_Use_Bean
+     * Return Type : int
+     * Parameters  : obj_Category_Use_Bean
+     * Description : Returns 1 if edit operation is successful else 0;
      */
 	
 	public int edit_category(Category_Use_Bean obj_Category_Use_Bean){
@@ -157,6 +176,7 @@ public class Category_Table {
 	 /*Method Name : get_all_category
      * Return Type: List
      * Parameters :void
+     * Description : Returns all the category information in a list
      */
 
 			public List<Category_Use_Bean> get_all_category(){
@@ -214,8 +234,9 @@ public class Category_Table {
 			
 
 			 /*Method Name : get_search_category
-		     * Return Type: List
-		     * Parameters :String Search
+		     * Return Type : List
+		     * Parameters  : String Search
+		     * Description : Returns the search result in a list 
 		     */
 			public List<Category_Use_Bean> get_search_result(String search){
 				Connection connection=null;

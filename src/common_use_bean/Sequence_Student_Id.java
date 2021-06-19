@@ -8,7 +8,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import common.DBConnection_LMS_Portal;
-
+/*
+ *Program to use Getter and setter methods
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
 public class Sequence_Student_Id {
 	
 	

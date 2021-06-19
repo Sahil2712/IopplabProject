@@ -18,12 +18,29 @@ import common_use_bean.Sequence_inventry_Id;
 import common_use_bean.Student_Use_Bean;
 
 
-
+/*
+ *Program to build an api for Admin_Book_Table_Model which performs functions like insert,edit,list recently added books,details of the books,search and view books present
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 5 Methods
+ 		*int insert_book(Book_Use_Bean obj_Book_Use_Bean)
+ 		*int edit_book(Book_Use_Bean obj_Book_Use_Bean)
+ 		*List<Book_Use_Bean> get_all_recently_added_books()
+ 		*Book_Use_Bean get_Complete_details_of_book(String book_sl_no)
+ 		*List<Book_Use_Bean> search_result_book(String search)
+ 		*List<Book_Use_Bean> view_all_books(int lim)
+ *Date Base Used: MySQL
+ *External Jar Required: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
 public class Admin_Book_Table_Model {
 	
 	 /* * Method Name   :insert_book
 	    * Return Type:int
 	    * Parameters :obj_Book_Use_Bean
+	    * Description: It inserts book information and return 1 if successful else 0;
 	  */
 	
 	public int insert_book(Book_Use_Bean obj_Book_Use_Bean){
@@ -150,9 +167,10 @@ public class Admin_Book_Table_Model {
 	
 	
 	
-	 /* * Method Name:edit_book
-	    * Return Type:int
-	    * Parameters :obj_Book_Use_Bean
+	 /* * Method Name	:edit_book
+	    * Return Type	:int
+	    * Parameters 	:obj_Book_Use_Bean
+	    * Description	:Edit Book Method Performs book edit operation if successful returns 1 else 0;
 	  */
 	
 	public int edit_book(Book_Use_Bean obj_Book_Use_Bean){
@@ -292,6 +310,7 @@ public class Admin_Book_Table_Model {
 	 /* * Method Name:get_all_recently_added_books
 	    * Return Type:List<Book_Use_Bean>
 	    * Parameters :void
+	    * Description : Returns the book present in the database in the descending order with limit 10
 	  */
 	public List<Book_Use_Bean> get_all_recently_added_books(){
 		Connection connection=null;
@@ -349,6 +368,7 @@ public class Admin_Book_Table_Model {
 	 /* * Method Name:get_Complete_details_of_book
 	    * Return Type:Book_Use_Bean
 	    * Parameters :book_sl_no
+	    * Description:Returns the details of the book which is selected.
 	  */
 						public Book_Use_Bean get_Complete_details_of_book(String book_sl_no){
 							Connection connection=null;
@@ -419,6 +439,7 @@ public class Admin_Book_Table_Model {
 						 /* * Method Name:search_result_book
 						    * Return Type:List<Book_Use_Bean>
 						    * Parameters :String search
+						    * Description:Returns the list of books searched
 						  */
 						public List<Book_Use_Bean> search_result_book(String search){
 							Connection connection=null;
@@ -514,6 +535,7 @@ public class Admin_Book_Table_Model {
 						 /* * Method Name:view_all_books
 						    * Return Type:List<Book_Use_Bean>
 						    * Parameters :int lim
+						    * Description: Returns upto 100 books present in the database  
 						  */
 						public List<Book_Use_Bean> view_all_books(int lim){
 							Connection connection=null;

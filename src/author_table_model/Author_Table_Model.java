@@ -13,14 +13,31 @@ import common.DBConnection_LMS_Portal;
 import common_use_bean.Author_Use_Bean;
 import common_use_bean.Category_Use_Bean;
 
-
+/*
+ *Program to build a api for the author table which performs functions like insert,edit,search and list all authors.
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 4 Methods
+ 		*int insert_author(Author_Use_Bean obj_Author_Use_Bean)
+ 		*int edit_author(Author_Use_Bean obj_Author_Use_Bean)
+ 		*List<Author_Use_Bean> get_all_authors()
+ 		*List<Author_Use_Bean> get_search_result_author(String search)
+ *Date Base Used: MySQL
+ *External Jar Required: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
 
 public class Author_Table_Model {
 	
 
-	 /*Method Name : insert_author
-    * Return Type:int
-    * Parameters :obj_Author_Use_Bean
+	 /* 
+	 
+	  * Method Name : insert_author
+	  * Return Type:int
+	  * Parameters :obj_Author_Use_Bean
+	  * Description : Insert author information into the database
     */
 	public int insert_author(Author_Use_Bean obj_Author_Use_Bean){
 		Connection connection=null;
@@ -40,6 +57,7 @@ public class Author_Table_Model {
 						"profile," +
 						"added_on" +
 						") values(?,?,?)";
+		
 		ps=connection.prepareStatement(query);
 
 		ps.setString(1,obj_Author_Use_Bean.getAuthor_name());
@@ -93,6 +111,7 @@ public class Author_Table_Model {
 	 /*Method Name : edit_author
 	    * Return Type:int
 	    * Parameters :obj_Author_Use_Bean
+	    * Description : Performs Edit information of the author and return the value if successful.
 	    */
 
 	public int edit_author(Author_Use_Bean obj_Author_Use_Bean){
@@ -158,10 +177,12 @@ public class Author_Table_Model {
 	
 	
 	
-	 /*Method Name : get_all_author
+	 /*
+	  	* Method Name : get_all_author
 	    * Return Type:List
 	    * Parameters :void
-	    */
+	    * Description : Performs list information of the author and return the list.
+	 */
 
 			public List<Author_Use_Bean> get_all_authors(){
 				Connection connection=null;
@@ -228,6 +249,7 @@ public class Author_Table_Model {
 			 /*Method Name   :get_search_result_author
 			    * Return Type:List<Author_Use_Bean>
 			    * Parameters :String Search
+			    * Description : Performs search information of the author and return the list.
 			  */
 			public List<Author_Use_Bean> get_search_result_author(String search){
 				Connection connection=null;

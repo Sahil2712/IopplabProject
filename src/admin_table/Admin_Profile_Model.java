@@ -10,11 +10,33 @@ import java.util.TimeZone;
 import common.DBConnection_LMS_Portal;
 import common_use_bean.Admin_Use_Bean;
 
+
+
+/*
+ *Program to build a api for the admin signin table which performs sign in ,edit profile and in finding the admin details.
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 3 Methods
+ 		* Admin_Use_Bean admin_sign_in(Admin_Use_Bean obj_Admin_Use_Bean)
+ 		* int edit_profile(Admin_Use_Bean obj_Admin_Use_Bean)
+ 		* Admin_Use_Bean get_admin_details(Admin_Use_Bean obj_Admin_Use_Bean)
+ *Date Base Used: MySQL
+ *External Jar Used: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
+
+
+
+
+
 public class Admin_Profile_Model {
 	
-		           /*Method Name : admin_sign_in
+		           /*Method Name : admin_sign_in(Admin_Use_Bean obj_Admin_Use_Bean)
 		            * Return Type: Admin_Use_Bean
-		            * Parameters : obj_Admin_Use_Bean
+		            * Parameters : Admin_Use_Bean obj_Admin_Use_Bean
+		            * Description : Returns the obj_Admin_Use_Bean with the information of the admin.
 		            */
 					public Admin_Use_Bean admin_sign_in(Admin_Use_Bean obj_Admin_Use_Bean){
 						PreparedStatement ps=null;
@@ -93,6 +115,7 @@ public class Admin_Profile_Model {
 					   /*Method Name : edit_profile
 			            * Return Type: int
 			            * Parameters : obj_Admin_Use_Bean
+			            * Description : Edit the admin Profile and returns  1 if successful else 0;
 			            */
 					
 					public int edit_profile(Admin_Use_Bean obj_Admin_Use_Bean){
@@ -151,6 +174,7 @@ public class Admin_Profile_Model {
 					   /*Method Name : admin_sign_in
 			            * Return Type: Admin_Use_Bean
 			            * Parameters : obj_Admin_Use_Bean
+			            * Description : Returns All the admin details
 			            */
 					public Admin_Use_Bean get_admin_details(Admin_Use_Bean obj_Admin_Use_Bean){
 						PreparedStatement ps=null;

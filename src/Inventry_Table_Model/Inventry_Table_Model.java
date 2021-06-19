@@ -1,6 +1,7 @@
 package Inventry_Table_Model;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
@@ -12,7 +13,35 @@ import java.util.TimeZone;
 import common.DBConnection_LMS_Portal;
 import common_use_bean.Book_Use_Bean;
 import common_use_bean.Sequence_inventry_Id;
+
+/*
+ *Program to build a api for the adding information in the inventry and then get status of book_id,serial_no and list of books present
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 8 Methods
+		*List<Book_Use_Bean> get_books_status(String book_sl_no)
+		*Book_Use_Bean get_serial_status(String serial_sl_no)
+		*int edit_serial_status(Book_Use_Bean obj_Book_Use_Bean)
+		*int delete_serial(Book_Use_Bean obj_Book_Use_Bean)
+		*List<Book_Use_Bean> get_serial_from_bar_code(String search)
+		*List<Book_Use_Bean> get_inventry_of_books(String book_sl_no)
+		*int add_inventry(Book_Use_Bean obj_Book_Use_Bean)
+		*int get_count_serial_number(String book_sl_no)
+ *Date Base Used: MySQL
+ *External Jar Used: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
+
+
+
+
 public class Inventry_Table_Model {
+	
+	
+	
+	
 	
 	/* * Method Name:get_book_status()
 	    * Return Type:List<Book_Use_Bean>
@@ -168,7 +197,7 @@ public class Inventry_Table_Model {
 	/* * Method Name:edit_serial_status()
 	    * Return Type:int
 	    * Parameters :Book_Use_Bean obj_Book_Use_Bean
-	    * Description: Returns the integer value   
+	    * Description: Returns 1 if successful editing is done else 0; 
 	  */
 	public int edit_serial_status(Book_Use_Bean obj_Book_Use_Bean){
 		Connection connection=null;
@@ -249,7 +278,7 @@ public class Inventry_Table_Model {
 	/* * Method Name:delete_serial()
 	    * Return Type:int
 	    * Parameters :Book_Use_Bean obj_Book_Use_Bean
-	    * Description: Delete the serial number if flag=0 then false otherwise true  
+	    * Description: Returns 1 if delete is done successfully else 0
 	  */
 	public int delete_serial(Book_Use_Bean obj_Book_Use_Bean){
 		Connection connection=null;
@@ -318,7 +347,8 @@ public class Inventry_Table_Model {
 	
 	/* * Method Name:get_serial_from_bar_code()
 	    * Return Type:List<Book_Use_Bean>
-	    * Parameters :String search  
+	    * Parameters :String search
+	    * Description : Returns the barcode information in a list  
 	  */
 	public List<Book_Use_Bean> get_serial_from_bar_code(String search){
 		Connection connection=null;
@@ -391,7 +421,8 @@ public class Inventry_Table_Model {
 	/* * Method Name:get_inventry_of_books()
 	    * Return Type:List<Book_Use_Bean>
 	    * Parameters :String book_sl_no
-	    * Description: Returns the list by querying the values  
+	    * Description: Returns the list of books present in inventry  
+	    
 	  */
 	
 	public List<Book_Use_Bean> get_inventry_of_books(String book_sl_no){
@@ -464,6 +495,7 @@ public class Inventry_Table_Model {
 	/* * Method Name:add_inventry()
 	    * Return Type:int
 	    * Parameters :Book_Use_Bean obj_Book_Use_Bean  
+	    * Description:Return 1 if information is added to inventry successfully else 0
 	  */
 	public int add_inventry(Book_Use_Bean obj_Book_Use_Bean){
 		Connection connection=null;

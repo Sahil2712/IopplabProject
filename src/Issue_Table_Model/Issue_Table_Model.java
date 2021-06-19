@@ -12,13 +12,36 @@ import java.util.List;
 import common.DBConnection_LMS_Portal;
 import common_use_bean.Issue_Use_Bean;
 import common_use_bean.Sequence_Issue_Id;
+
+/*
+ *Program to build an api for issuing book,update,delete,get history of pending issue,returned and list of a student for whom book is used
+ *DATA STRUCTURE USED:ArrayList<>;
+ *Program has 11 Methods
+	*int update_issue_book(Issue_Use_Bean obj_Issue_Use_Bean)
+ 	*String  get_days_delay( String dateStart,String dateStop) 
+ 	*int issue_book(Issue_Use_Bean obj_Issue_Use_Bean)
+ 	*int issue_book_from_student(Issue_Use_Bean obj_Issue_Use_Bean)
+ 	*int delete_this_issue(Issue_Use_Bean obj_Issue_Use_Bean)
+ 	*List<Issue_Use_Bean> issue_history_for_a_barcode(String barcode)
+ 	*List<Issue_Use_Bean> issue_history_for_a_student(String Student_id)
+ 	*Issue_Use_Bean get_complete_details_of_issue(String issue_sl_no)
+ 	*List<Issue_Use_Bean> get_complete_issue_history(int lim)
+ 	*List<Issue_Use_Bean> get_all_pending_issues(int lim)
+ 	*List<Issue_Use_Bean> search_issue_history(String search)
+ *Date Base Used: MySQL
+ *External Jar Used: mysql-connector-java-8.0.19.jar
+ *Author :Sahil Rajeev Naik
+ *Date started: 20/05/2021
+ *Date ended: 	2/06/2021
+ *Testing :Raksha Udupi
+*/
 public class Issue_Table_Model {
 	
 	
 	/* * Method Name:update_issue_book()
 	    * Return Type:int
 	    * Parameters :obj_Issue_Use_Bean
-	    * Description: return true or flase  
+	    * Description: return true if the book is updated successfully else 0  
 	  */
 	public int update_issue_book(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
@@ -116,7 +139,7 @@ public class Issue_Table_Model {
 	/* * Method Name:get_days_delay()
 	    * Return Type:String
 	    * Parameters :String dateStart,String dateStop
-	    * Description: Return the days  
+	    * Description: Return the Days delayed in a string
 	  */
 	public String  get_days_delay( String dateStart,String dateStop) {
 		// String dateStart = "28-09-2014";
@@ -161,7 +184,7 @@ public class Issue_Table_Model {
 	/* * Method Name:get_issue_status()
 	    * Return Type:int
 	    * Parameters :obj_Issue_Use_Bean
-	    * Description: Returns true or false'  
+	    * Description: Returns 1 if book is issued else 0;  
 	  */
 	public int issue_book(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
@@ -274,7 +297,7 @@ public class Issue_Table_Model {
 	/* * Method Name:issue_book_from_student()
 	    * Return Type:int
 	    * Parameters :obj_Issue_Use_Bean
-	    * Description: Returns true or false'  
+	    * Description: Returns 1 if book is issued successfully from student else 0
 	  */
 	
 	
@@ -393,7 +416,7 @@ public class Issue_Table_Model {
 	/* * Method Name:delete_this_issue()
 	    * Return Type:int
 	    * Parameters :obj_Issue_Use_Bean
-	    * Description: Returns true or false'  
+	    * Description: Returns 1 if delete is successful else 0 
 	  */
 	public int delete_this_issue(Issue_Use_Bean obj_Issue_Use_Bean){
 		Connection connection=null;
@@ -462,7 +485,7 @@ public class Issue_Table_Model {
 	/* * Method Name:issue_history_for_a_barcode()
 	    * Return Type:List<Issue_Use_Bean>
 	    * Parameters :String barcode
-	    * Description: Returns the issue history  
+	    * Description: Returns the list of issue history with a barcode  
 	  */
 					public List<Issue_Use_Bean> issue_history_for_a_barcode(String barcode){
 						Connection connection=null;
@@ -709,7 +732,7 @@ public class Issue_Table_Model {
 					/* * Method Name:get_complete_issue_history(int lim)
 					    * Return Type:List<Issue_Use_Bean>
 					    * Parameters :int lim
-					    * Description: Returns the history  of issued book
+					    * Description: Returns the history  of issued book in a list
 					  */
 					public List<Issue_Use_Bean> get_complete_issue_history(int lim){
 						Connection connection=null;
@@ -794,7 +817,7 @@ public class Issue_Table_Model {
 					/* * Method Name:get_all_pending_issues(int lim)
 					    * Return Type:List<Issue_Use_Bean>
 					    * Parameters :int lim
-					    * Description: Returns the history  of issued book
+					    * Description: Returns the pending  books issued in a list 
 					  */
 					public List<Issue_Use_Bean> get_all_pending_issues(int lim){
 						Connection connection=null;
@@ -879,7 +902,7 @@ public class Issue_Table_Model {
 					/* * Method Name:search_issue_history(String search)
 					    * Return Type:List<Issue_Use_Bean>
 					    * Parameters :String search
-					    * Description: Returns the search_issue_history
+					    * Description: Returns the search_issue_history in a list
 					  */
 					
 					
